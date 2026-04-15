@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculadora</title>
+</head>
+<body>
+    <h1>Calculadora Aritmética y Binaria</h1>
+
+    <form method="POST">
+        <input type="number" name="num1" required>
+        <input type="number" name="num2" required>
+
+        <select name="operacion">
+            <optgroup label="Aritmética">
+                <option value="suma">+</option>
+                <option value="resta">-</option>
+                <option value="multiplicacion">*</option>
+                <option value="division">/</option>
+            </optgroup>
+
+            <optgroup label="Binaria">
+                <option value="and">AND</option>
+                <option value="or">OR</option>
+                <option value="xor">XOR</option>
+            </optgroup>
+        </select>
+
+        <button type="submit">Calcular</button>
+    </form>
+
+    {% if resultado is not none %}
+        <h2>Resultado: {{ resultado }}</h2>
+    {% endif %}
+</body>
+</html>
